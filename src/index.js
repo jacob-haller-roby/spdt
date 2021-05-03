@@ -1,4 +1,4 @@
-import readInput from "./readInput";
+import readInput from "./readInput.js";
 
 const main = async () => {
     let name = await readInput("what's your name?");
