@@ -8,7 +8,7 @@ const readName = async () => {
 const main = async () => {
     let number1 = Number(await readInput("give me a number!"));
     let number2 = Number(await readInput("give me another number!"));
-    let number3;
+    let number3 = Number(number1 + number2);
     // Do something here....
 
     console.log(number1 + "+" + number2 + "=" + number3);
