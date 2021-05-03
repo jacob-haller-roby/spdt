@@ -1,8 +1,11 @@
-const main = () => {
+import readInput from "./readInput";
 
-    console.log("hi there sabrowski!");
+const main = async () => {
+    let name = await readInput("what's your name?");
+    console.log("Your name is " + name);
+};
 
-    console.log("let's build a thing.")
-}
 
-main();
+await main();
+process.exit();
+
