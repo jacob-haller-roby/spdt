@@ -4,6 +4,7 @@ import readName from './readName.js';
 import problem1 from './conditionals/problem1.js';
 import problem2 from './conditionals/problem2.js';
 import problem3 from "./conditionals/problem3.js";
+import problem4 from "./conditionals/problem4.js";
 
 // NOTE: any line that starts with `//` is a comment.  It's not code, just a note in plain english!
 // You can also create a comment block by typing `/*` to start the comment and then end it with `*/`
@@ -17,6 +18,7 @@ import problem3 from "./conditionals/problem3.js";
 
 // problem1();
 // problem2();
-// problem3()
+// problem3();
+// problem4();
 
 process.exit(0);
