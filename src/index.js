@@ -1,24 +1,22 @@
-import readInput from "./readInput.js";
+import readInput from './readInput.js';
+import calculatorTestFunc from './calculatorTestFunc.js';
+import readName from './readName.js';
+import problem1 from './conditionals/problem1.js';
+import problem2 from './conditionals/problem2.js';
+import problem3 from "./conditionals/problem3.js";
 
-const readName = async () => {
-    let name = await readInput("what's your name?");
-    console.log("Your name is " + name);
-};
+// NOTE: any line that starts with `//` is a comment.  It's not code, just a note in plain english!
+// You can also create a comment block by typing `/*` to start the comment and then end it with `*/`
 
-const main = async () => {
-    let number1 = Number(await readInput("give me a number!"));
-    let number2 = Number(await readInput("give me another number!"));
-    let number3 = number1 + number2;
-    let number4 = number3 * 10
+/*
+ Call one of the functions here to have it executed when you run `npm start`
+ E.g., add `problem1();` to have `npm start` run the `readName` function from the `readName.js` file.
+ I've added the various problem functions below, but they are currently commented out, so they will not run.
+ Simply remove the `//` before one of the problems to un-comment it so that it will execute.
+*/
 
+// problem1();
+// problem2();
+// problem3()
 
-
-    console.log(number1 + "+" + number2 + "=" + number3);
-    console.log("But" + " " + number4 + ", " + "is ten times as large")
-
-
-}
-
-
-await main();
 process.exit(0);
