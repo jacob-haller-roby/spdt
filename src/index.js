@@ -10,7 +10,7 @@ import problem3 from "./conditionals/problem3.js";
 
 /*
  Call one of the functions here to have it executed when you run `npm start`
- E.g., add `problem1();` to have `npm start` run the `readName` function from the `readName.js` file.
+ E.g., add `problem1();` to have `npm start` run the `problem1` function from the `problem1.js` file.
  I've added the various problem functions below, but they are currently commented out, so they will not run.
  Simply remove the `//` before one of the problems to un-comment it so that it will execute.
 */
