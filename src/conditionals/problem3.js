@@ -38,7 +38,7 @@ const isAverageGreaterThan = (number1, number2, number3) => {
     }
 };
 
-const problem2 = () => {
+const problem3 = () => {
     // this function will test your code.
     // Do not modify this function, but you can look at it to see what it does!
 
@@ -55,4 +55,4 @@ const problem2 = () => {
     logResults();
 };
 
-export default problem2;
+export default problem3;

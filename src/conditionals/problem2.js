@@ -11,6 +11,7 @@
     to use this keyword.
  */
 import generateTestFunc from '../test/generateTestFunc.js';
+import {RandomString} from "../test/testUtils.js";
 
 
 
@@ -67,6 +68,8 @@ const problem2 = () => {
     test(['this is a string', 'another string'], 'Invalid Input');
     test([1, 'input 2 is a string'], 'Invalid Input');
     test(['input 1 is a string', 999], 'Invalid Input');
+    test([RandomString(), 1], 'Invalid Input');
+    test([999, RandomString()], 'Invalid Input');
     test([1, 10], 5.5);
     test([100, 550], 325);
     test([0, 8], 4);
