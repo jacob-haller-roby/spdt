@@ -5,7 +5,7 @@ const generateTestFunc = (func) => {
         test: (inputs, expectedOutput, dontTransformInput) => {
             const inputArray = Array.isArray(inputs) || dontTransformInput ? inputs : [inputs];
             const output = func(...inputArray);
-            const inputString = inputs.join(', ');
+            const inputString = inputArray.join(', ');
             if (output !== expectedOutput) {
                 failedTests++;
                 console.error(

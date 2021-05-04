@@ -1,57 +1,51 @@
 /*
-    So far, we've been using `if` statements to return values.  But sometimes we want to do some code inside an
-    `if` statement without returning right away.
+    This function is called `tripleEquals`.
 
-    In these situations, we often also need an `else` statement, to control the behavior that happens when the `if`
-    condition is not met.
+    It accepts 3 input numbers.  It's job is to determine if all 3 of the numbers are equal to each other.
 
-    Here's an example:
+    If all 3 numbers are the same, it should output "All 3 are the same".
+    If all 3 numbers are unique, it should output "All 3 numbers are unique".
+    If any 2 of the numbers are the same, but the third is unique, it should output "2 are the same, but the third is unique".
 
-    const yearsUntilBeers = (name, age) => {
+    HINT:  You can use more than one logical operator (`&&` and `||`) inside a single `if` statement.
 
-        let yearsToWait;
+    Example:
 
-        if (age >= 21) {
-            yearsToWait = 0;
-        } else {
-            yearsToWait = 21 - age;
-        }
-
-        const outputMessage = (name + " will have to wait " + yearsToWait + " years until they can order a beer!");
-        return outputMessage;
+    ```
+    if (name === "David" || name === "Jake" || name === "Gonzalo" || name === "Noah" || name === "Jennifer") {
+        console.log('get ready for dnd, nerd');
     }
+    ```
+    (Glad that you and Loftin have the same first name, that was getting to be a long line of code.)
 
-    The above function takes a person's name (string) and age (number) and outputs a message about when they will be of
-    legal age to purchase a beer.  If their age is equal to or greater than 21, they have to wait 0 years (they can
-    buy a beer today). Otherwise, we set the number of `yearsToWait` equal to their current age subtracted from 21.
 
-    For the below problem, we're going to make a very similar function.  But for this problem, we're going to pretend to
-    be in a different universe.  In this parallel dimension, the drinking age is still 21 for most people....
-    except for anyone named "David".  People named David get special privileges and can start drinking at 16.
 
-    Lucky them.
+    BONUS POINTS: It's possible to solve this problem using three `if` statements.  But there is a better way!
 
-    HINT:  You can put `if` statements inside other `if` statements (or inside `else` statements!).
+    Take a look at this example code;
+
+    ```
+    if (name === "David") {
+        return "hi David!";
+    }
+    return "you're not David... go away."
+    ```
+
+    Because we gave a `return` inside of the `if` block, the only way to reach the last line is if the `name === "David"`
+    condition was `false`.  That means we already know that `name !== "David"` for every line after that `if` block!
+
+    And that means we didn't need to add an `if (name !== "David")` line.
+
+    See if you can do something similar in order to write this function using only 2 `if` statements instead of 3.
+
  */
 import generateTestFunc from '../test/generateTestFunc.js';
 
 
 // TODO: Update this function!
-const yearsUntilBeers = (name, age) => {
+const tripleEquals = (number1, number2, number3) => {
 
-    //FIXME: update this function so that anyone named 'David' has a special lower drinking age of 16
-    // names will be given as a single word with the first letter capitalized
-    let yearsToWait;
-
-    if (age >= 21) {
-        yearsToWait = 0;
-    } else {
-        yearsToWait = 21 - age;
-    }
-
-
-    const outputMessage = (name + " will have to wait " + yearsToWait + " years until they can order a beer!");
-    return outputMessage;
+    //FIXME: add your code here!
 }
 
 const problem4 = () => {
@@ -60,14 +54,25 @@ const problem4 = () => {
 
     // It will throw an error if the function does not work correctly
     // It will output "Code ran successfully!" if the function does work correctly
-    const { test, logResults } = generateTestFunc(yearsUntilBeers);
+    const randomNumber1 = Math.floor(Math.random() * 100);
+    const randomNumber2 = Math.floor(Math.random() * 900) + 101;
+    const randomNumber3 = Math.floor(Math.random() * 9000) + 1001;
+    const { test, logResults } = generateTestFunc(tripleEquals);
+    test([1,1,1], "All 3 are the same");
+    test([993,993,993], "All 3 are the same");
+    test([randomNumber1, randomNumber1, randomNumber1], "All 3 are the same");
 
-    test(['Bob', 18], "Bob will have to wait 3 years until they can order a beer!");
-    test(['Janette', 34], "Janette will have to wait 0 years until they can order a beer!");
-    test(['Karen', 69], "Karen will have to wait 0 years until they can order a beer!");
-    test(['Gonzalo', 5], "Gonzalo will have to wait 16 years until they can order a beer!");
-    test(['David', 15], "David will have to wait 1 years until they can order a beer!");
-    test(['David', 17], "David will have to wait 0 years until they can order a beer!");
+    test([1,2,3], "All 3 numbers are unique");
+    test([randomNumber1, randomNumber2, randomNumber3], "All 3 numbers are unique");
+
+    test([1,1,2], "2 are the same, but the third is unique");
+    test([2,1,2], "2 are the same, but the third is unique");
+    test([1,3,3], "2 are the same, but the third is unique");
+
+    test([randomNumber1,randomNumber1,randomNumber2], "2 are the same, but the third is unique");
+    test([randomNumber1,randomNumber3,randomNumber1], "2 are the same, but the third is unique");
+    test([randomNumber3,randomNumber2,randomNumber2], "2 are the same, but the third is unique");
+
 
     logResults();
 };
