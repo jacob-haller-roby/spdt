@@ -46,6 +46,15 @@ import generateTestFunc from '../test/generateTestFunc.js';
 const tripleEquals = (number1, number2, number3) => {
 
     //FIXME: add your code here!
+    if (number1 === number2 && number1 === number3){
+        return "All 3 are the same"
+    }
+
+    if (number1 === number2 || number1 === number3 || number2 === number3){
+        return "2 are the same, but the third is unique"
+    }
+    return 'All 3 numbers are unique'
+
 }
 
 const problem4 = () => {
