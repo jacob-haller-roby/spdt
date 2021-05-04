@@ -32,10 +32,10 @@ const getAverage = (number1, number2) => {
     const typoeOfUndefined = typeof exampleUndefined; // "undefined"
 
     // console logs to demonstrate what the result of the `typeof` keyword looks like
-    console.log('type of exampleString is: ' + typeOfString);
-    console.log('type of exampleNumber is: ' + typeOfNumber);
-    console.log('type of exampleBoolean is: ' + typeOfBoolean);
-    console.log('type of exampleUndefined is: ' + typoeOfUndefined);
+    //console.log('type of exampleString is: ' + typeOfString);
+    //console.log('type of exampleNumber is: ' + typeOfNumber);
+    //console.log('type of exampleBoolean is: ' + typeOfBoolean);
+    //console.log('type of exampleUndefined is: ' + typoeOfUndefined);
 
     // So now, your job is to use this `typeof` keyword to verify that the two inputs of this function (number1, number2)
     // are of the correct type.  You'll need more `if` statements for that, too!
@@ -43,6 +43,17 @@ const getAverage = (number1, number2) => {
     // Once you know that the inputs are the correct type, be sure to then return the average of the two inputs.
 
     //FIXME: Add your code here!
+
+    if (("string" === typeof number1) || ('string' === typeof number2)){
+
+        return ('Invalid Input')
+    }
+
+    if (('number' === typeof number1) || ('number' === typeof number2)){
+
+        return ((number1 + number2) / 2 )
+    }
+
 };
 
 const problem2 = () => {

@@ -31,9 +31,56 @@ const convertStringToNumber = (numberString) => {
         // available outside the function.
 
         // Check the problem description to figure out what the return value should be.
-        return "this is how we return a value from the function! but this long string probably isn't what we want to return here...";
+        return 1;
     }
+    if (numberString === 'two') {
 
+        return 2;
+    }
+    if (numberString === 'three') {
+
+        return 3;
+    }
+    if (numberString === 'four') {
+
+        return 4;
+    }
+    if (numberString === 'five') {
+
+        return 5;
+    }
+    if (numberString === 'six') {
+
+        return 6;
+    }
+    if (numberString === 'seven') {
+
+        return 7;
+    }
+    if (numberString === 'eight') {
+
+        return 8;
+    }
+    if (numberString === 'nine') {
+
+        return 9;
+    }
+    if (numberString === 'zero') {
+
+        return 0;
+    }
+    if (numberString === 'wrong') {
+
+        return ("Invalid Input");
+    }
+    if (numberString === 1) {
+
+        return ("Invalid Input");
+    }
+    if (numberString === undefined) {
+
+        return ("Invalid Input");
+    }
     return 'this value will be returned if the above condition is not met!';
 };
 

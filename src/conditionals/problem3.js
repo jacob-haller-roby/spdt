@@ -23,6 +23,19 @@ import { getAverage } from './problem2.js';
 const isAverageGreaterThan = (number1, number2, number3) => {
     const average = getAverage(number1, number2);
     //FIXME: Add your code here!
+    if (((number1 + number2) / 2 ) > number3){
+
+        return (Boolean ( true))
+
+    }
+    if (((number1 + number2) / 2 ) < number3){
+
+        return (Boolean ( false))
+    }
+    if (((number1 + number2) / 2 ) === number3){
+
+        return (Boolean ( false))
+    }
 };
 
 const problem2 = () => {

@@ -15,8 +15,8 @@ import problem3 from "./conditionals/problem3.js";
  Simply remove the `//` before one of the problems to un-comment it so that it will execute.
 */
 
-problem1();
-// problem2();
-// problem3()
+//problem1();
+//problem2();
+//problem3()
 
 process.exit(0);
