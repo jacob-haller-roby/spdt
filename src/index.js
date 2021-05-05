@@ -27,7 +27,7 @@ import problem10 from "./conditionals/problem10.js";
 // problem3();
 // problem4();
 // problem5();
-// problem6();
+ problem6();
 // problem7();
 // problem8();
 // problem9();
