@@ -12,7 +12,7 @@
     Assume that it is not a leap year when determining the day count for February.
  */
 import generateTestFunc from '../test/generateTestFunc.js';
-import {RandomString} from "../test/testUtils.js";
+import {RandomString, RandomNumber} from "../test/testUtils.js";
 
 
 // TODO: Update this function!
@@ -43,8 +43,8 @@ const problem7 = () => {
 
     test(0, "Invalid Input");
     test(13, "Invalid Input");
-    test(Math.floor(Math.random() * 100) - 100, "Invalid Input");
-    test(Math.floor(Math.random() * 100) + 13, "Invalid Input");
+    test(RandomNumber(-100,-1), "Invalid Input");
+    test(RandomNumber(14,100), "Invalid Input");
     test("string input", "Invalid Input");
     test(RandomString(), "Invalid Input");
 

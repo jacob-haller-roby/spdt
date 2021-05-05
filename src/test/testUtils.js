@@ -8,3 +8,8 @@ export const RandomString = () => {
     }
     return string;
 }
+
+export const RandomNumber = (min, max) => {
+    const range = max - min;
+    return Math.floor(Math.random() * range) + min;
+}
