@@ -17,7 +17,7 @@
     However, 1900, 1800, and 1700 were NOT leap years.
  */
 import generateTestFunc from '../test/generateTestFunc.js';
-import {RandomNumber} from "../test/testUtils";
+import {RandomNumber} from "../test/testUtils.js";
 
 
 // TODO: Update this function!

@@ -19,7 +19,7 @@
 import generateTestFunc from '../test/generateTestFunc.js';
 import {getDaysInMonth} from "./problem7.js";
 import {isLeapYear} from "./problem8.js";
-import {RandomNumber} from "../test/testUtils";
+import {RandomNumber} from "../test/testUtils.js";
 
 
 // TODO: Update this function!

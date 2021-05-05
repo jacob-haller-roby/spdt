@@ -1,9 +1,16 @@
-const color = (function (colors) {
-    const fn = (code, str) => `\x1b[${code}m${str}\x1b[39m`;
-    const obj = { grey: fn.bind(null, 90) };
-    for (let i = 0; i < colors.length; i++) obj[colors[i]] = fn.bind(null, 30 + i);
-    return obj;
-})(['black', 'red', 'green', 'yellow', 'blue', 'magenta', 'cyan', 'white']);
+const applyColorCode = (code) => (str) => `\x1b[${code}m${str}\x1b[39m`;
+
+const color = {
+    black: applyColorCode(30),
+    red: applyColorCode(31),
+    green: applyColorCode(32),
+    yellow: applyColorCode(33),
+    blue: applyColorCode(34),
+    magenta: applyColorCode(35),
+    cyan: applyColorCode(36),
+    white: applyColorCode(37),
+    grey: applyColorCode(90),
+};
 
 const generateTestFunc = (func) => {
     let failedTests = 0;
