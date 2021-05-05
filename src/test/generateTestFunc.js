@@ -24,7 +24,7 @@ const generateTestFunc = (func) => {
             }
             passedTests++;
             console.log(
-                color.green(`\nCorrect output!`) +
+                color.green(`\nTest Passed!`) +
                 `: \ninputs: ${inputString}. \noutput: ${typeof output} "${output}"\n`,
                 );
             return;
