@@ -10,6 +10,6 @@ export const RandomString = () => {
 }
 
 export const RandomNumber = (min, max) => {
-    const range = max - min;
+    const range = Math.abs(max - min);
     return Math.floor(Math.random() * range) + min;
 }
