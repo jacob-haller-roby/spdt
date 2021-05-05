@@ -12,19 +12,20 @@ const generateTestFunc = (func) => {
         test: (inputs, expectedOutput, dontTransformInput) => {
             const inputArray = Array.isArray(inputs) || dontTransformInput ? inputs : [inputs];
             const output = func(...inputArray);
-            const inputString = inputArray.join(', ');
+            const inputString = inputArray.map(input => `${typeof input} "${input}"`).join(', ');
             if (output !== expectedOutput) {
                 failedTests++;
                 console.error(
-                    color.red(`\nInvalid output with inputs: ${inputString}.`) +
-                    `\nExpected ${typeof expectedOutput} "${expectedOutput}" but got ${typeof output} "${output}"\n`
+                    color.red(`\nTest Failed.`) +
+                    `\ninputs: ${inputString}` +
+                    `\noutput: Expected ${typeof expectedOutput} "${expectedOutput}" but got ${typeof output} "${output}"\n`
                 );
                 return;
             }
             passedTests++;
             console.log(
                 color.green(`\nCorrect output!`) +
-                `: inputs: ${inputString}. output: ${output}\n`,
+                `: \ninputs: ${inputString}. \noutput: ${typeof output} "${output}"\n`,
                 );
             return;
         },
