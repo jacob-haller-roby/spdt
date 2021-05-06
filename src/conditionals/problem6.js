@@ -38,39 +38,36 @@ import {RandomString} from "../test/testUtils.js";
 
 // TODO: Update this function!
 const getDayName = (dayIndex) => {
-    if (dayIndex === 1){
+
+    if (dayIndex % 7 === 1) {
         return ("Sunday")
     }
 
-    if (dayIndex === 2){
+    if (dayIndex % 7 === 2) {
         return ('Monday')
     }
 
-    if (dayIndex === 3){
+    if (dayIndex % 7 === 3) {
         return ('Tuesday')
     }
 
-    if (dayIndex === 4){
+    if (dayIndex % 7 === 4) {
         return ('Wednesday')
     }
 
-    if (dayIndex === 5){
+    if (dayIndex % 7 === 5) {
         return ('Thursday')
     }
 
-    if (dayIndex === 6){
+    if (dayIndex % 7 === 6) {
         return ('Friday')
     }
 
-    if (dayIndex === 7){
+    if (((dayIndex <= 0) % 7) +7 === 7) {
         return ('Saturday')
     }
-
-    if (dayIndex> 7)  {
-        return getDayName(dayIndex % 7)
-    }
-
     return 'Invalid Input'
+
     //FIXME: add your code here!
 }
 
