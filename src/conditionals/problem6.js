@@ -63,9 +63,13 @@ const getDayName = (dayIndex) => {
         return ('Friday')
     }
 
-    if (((dayIndex <= 0) % 7) +7 === 7) {
-        return ('Saturday')
+    if (dayIndex === 0){
+        return ("Invalid Input")
     }
+
+    if ((dayIndex > 0) || (dayIndex % 7  === 0))
+        return ('Saturday')
+    
     return 'Invalid Input'
 
     //FIXME: add your code here!
