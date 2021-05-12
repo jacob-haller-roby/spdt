@@ -18,6 +18,59 @@ import {RandomString, RandomNumber} from "../test/testUtils.js";
 // TODO: Update this function!
 const getDaysInMonth = (monthIndex) => {
 
+    if ((monthIndex < 1) || (monthIndex  === 0) || (monthIndex > 12)){
+        return "Invalid Input"
+    }
+
+    if (monthIndex === 1){
+        return 31
+    }
+
+    if (monthIndex === 2){
+        return 28
+    }
+
+    if (monthIndex === 3){
+        return 31
+    }
+
+    if (monthIndex === 4){
+        return 30
+    }
+
+    if (monthIndex === 5){
+        return 31
+    }
+
+    if (monthIndex === 6){
+        return 30
+    }
+
+    if (monthIndex === 7){
+        return 31
+    }
+
+    if (monthIndex === 8){
+        return 31
+    }
+
+    if (monthIndex === 9){
+        return 30
+    }
+
+    if (monthIndex === 10){
+        return 31
+    }
+
+    if (monthIndex === 11){
+        return 30
+    }
+
+    if (monthIndex === 12){
+        return 31
+    }
+    
+    return "Invalid Input"
     //FIXME: add your code here!
 }
 
