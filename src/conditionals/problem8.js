@@ -48,6 +48,12 @@ const problem8 = () => {
     test(1998, false);
     test(2000, true);
     test(1200, true);
+    test(1900, false);
+    test(RandomNumber(1,3)*100, false);
+    test(RandomNumber(1,3)*300, false);
+    test(RandomNumber(1,3)*500, false);
+    test(RandomNumber(1,3)*700, false);
+    test(RandomNumber(1,3)*900, false);
     test(getRandomLeapYear(), true);
     test(getRandomLeapYear(), true);
     test(getRandomLeapYear(), true);
