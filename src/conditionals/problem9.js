@@ -62,6 +62,7 @@ const problem9 = () => {
     test([2,getRandomNonLeapYear()], 28);
     test([2,getRandomNonLeapYear()], 28);
     test([2,getRandomNonLeapYear()], 28);
+    test([2,RandomNumber(1,3)*100], 28);
 
     logResults();
 };

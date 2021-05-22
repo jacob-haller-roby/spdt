@@ -17,7 +17,7 @@
     However, 1900, 1800, and 1700 were NOT leap years.
  */
 import generateTestFunc from '../test/generateTestFunc.js';
-import {RandomNumber} from "../test/testUtils.js";
+import {RandomNumber, RandomString} from "../test/testUtils.js";
 
 
 // TODO: Update this function!
@@ -60,6 +60,9 @@ const problem8 = () => {
     test(getRandomNonLeapYear(), false);
     test(getRandomNonLeapYear(), false);
     test(getRandomNonLeapYear(), false);
+    test(-1, "Invalid Input");
+    test(4001, "Invalid Input");
+    test(RandomString(), "Invalid Input");
 
     logResults();
 };
