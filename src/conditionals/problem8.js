@@ -22,7 +22,13 @@ import {RandomNumber} from "../test/testUtils.js";
 
 // TODO: Update this function!
 const isLeapYear = (year) => {
-
+    if ((year < 1) || (year > 4000)){
+        return "Invalid Input"
+    }
+    if ((year % 4) === 0){
+        return Boolean(true)
+    }
+    return Boolean(false)
     //FIXME: add your code here!
 }
 
