@@ -30,7 +30,7 @@ import problem10 from "./conditionals/problem10.js";
 //problem6();
 // problem7();
 // problem8();
- problem9();
-// problem10();
+// problem9();
+ problem10();
 
 process.exit(0);

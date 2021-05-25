@@ -43,9 +43,12 @@ const yearsUntilBeers = (name, age) => {
     // names will be given as a single word with the first letter capitalized
     let yearsToWait;
 
-    if (age >= 21) {
+    if ((age >= 21) || ((name === "David") && (age >= 16))) {
         yearsToWait = 0;
     } else {
+        if (name === "David")
+            yearsToWait = 16 - age
+        else
         yearsToWait = 21 - age;
     }
 
