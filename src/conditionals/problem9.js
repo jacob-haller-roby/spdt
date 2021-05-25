@@ -27,6 +27,19 @@ const getDaysInMonthAndYear = (monthIndex, year) => {
     const daysInMonth = getDaysInMonth(monthIndex); // `daysInMonth` is now the return of your `getDaysInMonth` function!
     const leapYear = isLeapYear(year); // `leapYear` is now the return of your `isLeapYear` function!
     //FIXME: add your code here!
+
+    if ((monthIndex === 2) && (isLeapYear(year) === (Boolean(true)))) {
+        return 29
+
+    }
+
+    return getDaysInMonth(monthIndex)
+
+
+
+
+
+
 }
 
 const problem9 = () => {
