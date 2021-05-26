@@ -36,6 +36,12 @@
 
     if the input value is not a string, the function should return "Invalid Input".
 
+    HINT: The two string metadata values explained above are crucial to solving this problem.
+
+    We need to check every character within `inputString`.  `charAt` let's us examine one character at a time,
+    but we'll need a loop in order to call this function for every character within the string.  `length` can be helpful
+    in determining how many loops we'll need.
+
 
  */
 
