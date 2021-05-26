@@ -69,7 +69,7 @@ import generateTestFunc from '../test/generateTestFunc.js';
 
 
 // TODO: Update this function!
-const repeat20Times = () => {
+const repeat20Times = (inputString) => {
     //FIXME: Add your code here!
 
 };
