@@ -33,7 +33,7 @@ const getFactorial = (factorial) => {
 
 };
 
-const problem1 = () => {
+const problem2 = () => {
     // this function will test your code.
     // Do not modify this function, but you can look at it to see what it does!
 
@@ -54,4 +54,4 @@ const problem1 = () => {
     logResults();
 };
 
-export default problem1;
+export default problem2;
