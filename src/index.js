@@ -1,8 +1,8 @@
 import readInput from './readInput.js';
 import calculatorTestFunc from './calculatorTestFunc.js';
 import readName from './readName.js';
-import * as Conditionals from './conditionals';
-import * as Loops from './loops';
+import * as Conditionals from './conditionals/index.js';
+import * as Loops from './loops/index.js';
 
 // NOTE: any line that starts with `//` is a comment.  It's not code, just a note in plain english!
 // You can also create a comment block by typing `/*` to start the comment and then end it with `*/`
